@@ -31,6 +31,7 @@ def test_distance():
     assert st9.distance('a', ' ') == 3
     assert st9.distance('a', 'm') == np.sqrt(2)
 
+
 def test_get_button():
     """get_button returning sensible values for standard T9."""
     assert st9.get_button('a') == 2
