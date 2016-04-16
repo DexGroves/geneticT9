@@ -25,13 +25,12 @@ book = BookDownloader().download(war_and_peace_url, standard_map.keys())
 # Figure out how common letter tuples are
 com_tups = book_to_most_common_tuples(book)
 
-# Standard T9 layout
+# Standard T9 layout and reasonable key pressing stats
 st9 = KeyboardLayout(standard_map)
-
-# Figure out how long it takes someone with these stats to reproduce W&P
 kp = KeyPresser(10, 0.2, 0.5)
 
 
+# Figure out how long it takes someone with these stats to reproduce W&P
 def evaluate_fitness(tuple_counter, keypresser, layout):
     total = 0
     for ((prev, cur), times) in tuple_counter:
