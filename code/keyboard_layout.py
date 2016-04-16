@@ -1,3 +1,4 @@
+from __future__ import division
 import numpy as np
 
 
@@ -32,3 +33,7 @@ class KeyboardLayout(object):
         vert_distance = np.abs(np.floor((cur-1)/3) - np.floor((prev-1)/3))
 
         return np.sqrt(hoz_distance**2 + vert_distance**2)
+
+    def get_button(self, letter):
+        """Get the button associated with a letter."""
+        return self.layout[letter][0]
